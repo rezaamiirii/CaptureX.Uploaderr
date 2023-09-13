@@ -131,12 +131,9 @@ namespace CaptureX.Uploader
                     {
                         DateTime fromDate = dateTimePicker1.Value;
                         DateTime toDate = dateTimePicker2.Value;
-                        if (fromDate > toDate || toDate > DateTime.Now || fromDate > DateTime.Now)
+                        if (fromDate.Date > toDate || toDate.Date > DateTime.Now || fromDate.Date > DateTime.Now)
                         {
                             MessageBox.Show("From Date Must Be Lesser Than To Date!");
-                            //label8.Text = "From Date Must Be Lesser Than To Date";
-                            //label8.Font = new Font("arial", 10);
-                            //label8.ForeColor = Color.Red;
                         }
 
                         //CalculateTheCountOfFiles(false, sourcePath, destinationPath, fromDate, toDate);
